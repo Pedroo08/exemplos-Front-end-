@@ -2,6 +2,7 @@
 body{
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
+    
 }
 
 body * {
@@ -15,15 +16,21 @@ body * {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
 }
 
 .left-login{
+    
     width: 50vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+
+    
 }
 
 .left-login > h1{
@@ -32,7 +39,7 @@ body * {
 }
 
 .left-login-img{
-    width: 35vw;
+    width: 32vw;
 }
 .link{
     margin: 0;
@@ -59,6 +66,31 @@ body * {
     background: #2f2841;
     border-radius: 20px;
     box-shadow: 0px 10px 40px #00000056;
+
+}
+
+.anim{
+   
+    /*para animação*/
+    animation-name: rightIn;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode:backwards;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes rightIn{
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+        
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+        
+    }
 }
 
 .card-login > h1{
@@ -116,38 +148,57 @@ body * {
 }
 
 @media only screen and (max-width: 950px){
+   
     .card-login{
-        width: 85%;
+        width: 90%;
     }
 }
 
-@media only screen and (max-width: 600px){
+@media  (max-width: 768px){
     .main-login{
+        width: 100%;
+        height: 100%;
+        padding-bottom: 1rem;
         flex-direction: column;
     }
 
     .left-login > h1{
         display: none;
+        
     }
 
     .left-login{
         width: 100%;
         height: auto;
+        padding: 1.5rem;
     }
 
     .right-login{
-        width: 100%;
-        height: auto;
+        width: 80%;
+        height: 80%;
        
     }
 
     .left-login-img{
         width: 50vw;
-        margin-bottom: 20px;
+       
     }
 
     .card-login{
         width: 80%;
     }
+}
+
+@media (max-width: 480px) {
+
+    .left-login-img{
+        width: 80vw;
+       
+    }
+
+    .card-login{
+        width: 100%;
+    }
+
 }
 
